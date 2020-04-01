@@ -17,7 +17,7 @@ In order to install it on your PYNQ, you're PYNQ must be running the v2.5 image.
 To install the PRIO project, run the following command from a terminal connected to your board:
 
 ```console
-sudo -H pip3 install git+https://github.com/byuccl/PYNQ-PRIO.git
+sudo -H pip3 install git+https://github.com/Siudya/PYNQ-PRIO.git
 ```
 The pip install will create a partial_reconfig folder in  ~/pynq/overlays/ on the PYNQ board. This directory will contain the necessary files, including bitstreams and python files, that are needed for Partial-Reconfiguration on the PYNQ.
 
@@ -29,4 +29,4 @@ To get started go, to ~/jupyter_notebooks/prio/Getting_Started_Partial_Reconfigu
 
 All board related files including Vivado projects, bitstreams, and example notebooks, can be found in the `/boards` folder.
 
-In Linux, you can rebuild the overlay by running *make* in the corresponding overlay folder (e.g. `/boards/Pynq-Z1/prio`). In Windows, you need to source the appropriate tcl files in the corresponding overlay folder.
+In Linux, you can rebuild the overlay by running *make* in the corresponding overlay folder (e.g. `/boards/Pynq-Z1/prio`). In Windows, you need to source the appropriate tcl files in the corresponding overlay folder.The order of .tcl files to source is  prio.tcl, create_design.tcl, create_pr.tcl, build_bitstream.tcl, check_prio.tcl.
