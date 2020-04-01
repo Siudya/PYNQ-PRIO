@@ -9,6 +9,11 @@ import shutil
 
 # global variables
 board = os.environ['BOARD']
+if board == "Pynq-Z2" or board == "Pynq-Z1":
+    board = "Pynq-Z1"
+else:
+    board = board
+    
 board_folder = 'boards/{}/'.format(board)
 notebooks_dir = os.environ['PYNQ_JUPYTER_NOTEBOOKS']
 prio_data_files = []
